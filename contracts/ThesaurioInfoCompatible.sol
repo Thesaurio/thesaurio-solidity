@@ -1,10 +1,16 @@
-pragma solidity ^0.4.21;
+pragma solidity 0.4.23;
+
 
 contract ThesaurioInfoCompatible {
-  function distributionInfo() public view returns (
-    uint256 minimumContribution,
-    uint256 maximumContribution,
-    uint256 currentTokenPrice,
-    uint256 remainingSupply
-  );
+
+    /**
+    * @dev Returns needed information by Thesaurio to update its database field every 5 minutes
+    */
+    function distributionInfo() public view returns (
+        uint256 minimumContribution,
+        uint256 maximumContribution,
+        uint256 currentTokenPrice,
+        uint256 remainingSupply
+    );
+
 }

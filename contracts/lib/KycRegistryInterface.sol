@@ -1,7 +1,10 @@
-pragma solidity ^0.4.21;
+pragma solidity 0.4.23;
+
 
 contract KycRegistryInterface {
-  event kycStatusChanged(address indexed _address, uint changeTimestamp, bool toStatus);
-  function kycStatusSet(address _address, bool _newKycStatus) public;
-  function isAddressCleared(address _address) public constant returns (bool);
+    /**
+    * @dev Returns true if an address is known (KYC Passed + Wallet linked on Thesaurio)
+    */
+    function isAddressCleared(address _address) public view returns (bool);
 }
+

@@ -1,11 +1,15 @@
-pragma solidity ^0.4.21;
+pragma solidity 0.4.23;
 
-import './lib/KycRegistryInterface.sol';
+import "./lib/KycRegistryInterface.sol";
+
 
 contract KycCompatible {
-  KycRegistryInterface kycRegistry;
 
-  constructor(address _kycRegistryAddress) public {
-    kycRegistry = KycRegistryInterface(_kycRegistryAddress);
-  }
+    KycRegistryInterface internal kycRegistry;
+
+    constructor(address _kycRegistryAddress) public {
+        kycRegistry = KycRegistryInterface(_kycRegistryAddress);
+    }
+
 }
+

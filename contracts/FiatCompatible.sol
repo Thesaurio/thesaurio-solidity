@@ -1,11 +1,14 @@
-pragma solidity ^0.4.21;
+pragma solidity 0.4.23;
 
-import './lib/PricesInterface.sol';
+import "./lib/PricesInterface.sol";
+
 
 contract FiatCompatible {
-  PricesInterface fiatPrices;
 
-  constructor(address fiatPricesAddress) public {
-    fiatPrices = PricesInterface(fiatPricesAddress);
-  }
+    PricesInterface internal fiatPrices;
+
+    constructor(address fiatPricesAddress) public {
+        fiatPrices = PricesInterface(fiatPricesAddress);
+    }
+
 }
